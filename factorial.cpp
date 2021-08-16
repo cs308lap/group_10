@@ -6,3 +6,6 @@ int factorial(int n){
     }
     else return 1;
 }
+
+
+/* group 10*/
