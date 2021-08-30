@@ -5,9 +5,9 @@ int main(){
     print_hello();
     cout<< endl;
     cout<<"The factorial of 5 is "<< factorial(5)<< endl;
-    int x=56;
-     int y=98;
-
-    cout<<gcd(x,y);
+    int n1, n2;
+    cout << "Enter two numbers: ";
+    cin >> n1 >> n2;
+    cout<<gcd(n1,n2);
     return 0;
 }
