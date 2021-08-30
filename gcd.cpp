@@ -1,24 +1,21 @@
 #include <iostream>
 using namespace std;
 
-int gcd(int n1,int n2) {
+int gcd(int a, int b)
+{
+    // Everything divides 0
+    if (a == 0)
+       return b;
+    if (b == 0)
+       return a;
 
-  int hcf;
-  // swapping variables n1 and n2 if n2 is greater than n1.
-  if ( n2 > n1) {
+    // base case
+    if (a == b)
+        return a;
 
-    int temp = n2;
-    n2 = n1;
-    n1 = temp;
-  }
-
-  for (int i = 1; i <=  n2; ++i) {
-    if (n1 % i == 0 && n2 % i ==0) {
-      hcf = i;
-    }
-  }
-
-
-
-  return hcf;
+    // a is greater
+    if (a > b)
+        return gcd(a-b, b);
+    return gcd(a, b-a);
 }
+
